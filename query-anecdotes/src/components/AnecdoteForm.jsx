@@ -1,20 +1,22 @@
-const AnecdoteForm = () => {
-  const onCreate = (event) => {
-    event.preventDefault()
-    const content = event.target.anecdote.value
-    event.target.reset()
-    console.log('new anecdote')
-  }
+import { useCreateAnecdote } from '../hooks/useAnecdotes'
 
+const AnecdoteForm = () => {
+  const creation = useCreateAnecdote()
+  const submit = event => {
+    event.preventDefault()
+    if (creation.isPending) return
+    const form = event.currentTarget
+    creation.mutate(form.elements.anecdote.value.trim(), { onSuccess: () => form.reset() })
+  }
   return (
-    <div>
+    <section>
       <h3>create new</h3>
-      <form onSubmit={onCreate}>
-        <input name="anecdote" />
-        <button type="submit">create</button>
+      <form onSubmit={submit}>
+        <label htmlFor="anecdote">Anecdote</label>
+        <input id="anecdote" name="anecdote" />
+        <button disabled={creation.isPending} type="submit">create</button>
       </form>
-    </div>
+    </section>
   )
 }
-
 export default AnecdoteForm

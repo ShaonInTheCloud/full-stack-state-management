@@ -1,37 +1,27 @@
 import AnecdoteForm from './components/AnecdoteForm'
 import Notification from './components/Notification'
+import { useAnecdotes, useVoteAnecdote } from './hooks/useAnecdotes'
 
 const App = () => {
-  const handleVote = (anecdote) => {
-    console.log('vote')
-  }
-
-  const anecdotes = [
-    {
-      content: 'If it hurts, do it more often',
-      id: '47145',
-      votes: 0,
-    },
-  ]
-
+  const query = useAnecdotes()
+  const voting = useVoteAnecdote()
+  if (query.isPending) return <p role="status">Loading anecdotes…</p>
+  if (query.isError) return <p role="alert">anecdote service not available due to problems in server</p>
   return (
-    <div>
+    <main>
       <h3>Anecdote app</h3>
-
       <Notification />
       <AnecdoteForm />
-
-      {anecdotes.map((anecdote) => (
+      {query.data.map(anecdote => (
         <div key={anecdote.id}>
           <div>{anecdote.content}</div>
           <div>
             has {anecdote.votes}
-            <button onClick={() => handleVote(anecdote)}>vote</button>
+            <button disabled={voting.isPending} onClick={() => voting.mutate(anecdote)}>vote</button>
           </div>
         </div>
       ))}
-    </div>
+    </main>
   )
 }
-
 export default App
