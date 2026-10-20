@@ -6,7 +6,7 @@ Starter structure and supplied tests from https://github.com/fullstack-hy2020/fs
 
 - Chapter 1 warm-up: submitted and graded 1/1 on 20 October 2026.
 - Exercise 1: Unicafe feedback counters use a Zustand store, with separate action selectors and derived statistics. Production build and ESLint pass.
-- Exercise 2: original six browser tests are unchanged; their workflow is enabled on main. Local Chromium download failed because the downloaded archive was truncated. GitHub Actions verification is pending.
+- Exercise 2: original six browser tests are unchanged; their workflow is enabled on main. Local Chromium download failed because the downloaded archive was truncated. [GitHub Actions run 39448384730](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39448384730) passed all six supplied browser tests on 20 October 2026. Exercises 1 and 2 are prepared but have not been submitted to the course portal.
 - Other apps remain the official starter code, not completed exercises.
 
 Run `npm ci` and `npm run dev` in `unicafe`. Tests: install dependencies in `unicafe-tests`, run `npx playwright install chromium`, then `npm test`.
