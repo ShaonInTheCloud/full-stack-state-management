@@ -17,3 +17,23 @@ Run each anecdote app in two terminals: `npm ci`, `npm run server`, and `npm run
 Run `npm ci` and `npm run dev` in `unicafe`. Tests: install dependencies in `unicafe-tests`, run `npx playwright install chromium`, then `npm test`.
 
 Implementation and validation were AI-assisted. Review the code and report assistance as required by the course before submission. No study hours or personal reading completion are claimed here.
+
+## Exercise map and sources
+
+| Exercises | Implementation |
+| --- | --- |
+| 1–2 | `unicafe/src/store.js`, counters/statistics and supplied browser suite |
+| 3–6 | `anecdotes/src/store.js`, `AnecdoteForm` and `AnecdoteList` |
+| 7–12 | Filter, Fetch service, persistent actions, notification store and deletion |
+| 13–18 | Supplied browser suite, `anecdotes/src/store.test.jsx`, mutation checks |
+| 19–23 | `query-anecdotes/src/hooks/useAnecdotes.js` and Fetch service |
+| 24–27 | `NotificationContext.jsx`, notification hooks and error callbacks |
+| 28 | This public repository URL, to be submitted after the prior chapters |
+
+Requirements reviewed from the University of Helsinki course on 20 October 2026:
+
+- https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-state-management/chapter-2
+- https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-state-management/chapter-3
+- https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-state-management/chapter-4
+
+The official starter and supplied browser tests remain attributed above. The final anecdote implementation replaces the early in-memory version with backend persistence as the later exercises require. Failed network mutations preserve existing state; forms clear only after success. These are local course demonstrations, with the supplied unauthenticated JSON Server backend.
