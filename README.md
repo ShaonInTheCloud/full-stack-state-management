@@ -4,8 +4,8 @@ Starter structure and supplied tests from https://github.com/fullstack-hy2020/fs
 
 ## Progress
 
-- Warm-up and exercises 1–27 are submitted and individually graded 1/1. Chapters 1–3 are locked. Exercise 2 and exercises 7–27 were submitted in one batch on 22 October 2026 (Europe/Kiev), more than six hours after the preceding batch.
-- Exercise 28 is prepared with this repository URL, but is not submitted. Its personal acknowledgement checkbox remains for the student to read and complete. Chapter 4 remains unlocked; final repository grading by a teacher is pending.
+- Warm-up and exercises 1–27 are submitted and individually graded 1/1. All four chapters are locked. Exercise 2 and exercises 7–27 were submitted in one batch on 22 October 2026 (Europe/Kiev), more than six hours after the preceding batch.
+- Exercise 28 was submitted with this repository URL on 22 October 2026 at approximately 02:12 Europe/Kiev, completing the same submission batch after the user's direction to finalize. The portal confirmed “Answer submitted” and Chapter 4 was locked. The repository assessment remains pending teacher review (currently 0/1); no final course grade or credit has been awarded yet.
 - All supplied browser tests passed locally on 22 October: Unicafe 6/6, Zustand Anecdotes 14/14, Query Anecdotes behavior 8/8 and notifications 5/5. All six unit tests and the supplied mutation verification also passed. Test assertions were unchanged.
 - The normal Playwright browser download was truncated in the execution environment. Local verification used Chromium 153 from the npm package `@sparticuz/chromium@153.0.0`, extracted without ownership changes, with temporary Playwright configuration outside the repository. The temporary configuration selected that executable, one worker and absolute server paths; the serverless single-process flag was removed to allow successive browser contexts. No test assertions or application source were changed for this verification.
 - All five GitHub workflows passed on source commit `7c0ae967cda1d5241576c9b87bc08f6a2840a2dc`: [Unicafe](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827490), [Anecdotes browser tests](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827469), [unit and mutation checks](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827438), [Query behavior](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827417) and [Query notifications](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827410). Reverified on 22 October; later commits only update this README.
@@ -26,7 +26,7 @@ Implementation and validation were AI-assisted. Review the code and report assis
 | 13–18 | Supplied browser suite, `anecdotes/src/store.test.jsx`, mutation checks |
 | 19–23 | `query-anecdotes/src/hooks/useAnecdotes.js` and Fetch service |
 | 24–27 | `NotificationContext.jsx`, notification hooks and error callbacks |
-| 28 | This public repository URL; prepared, pending student acknowledgement and submission |
+| 28 | This public repository URL; submitted and locked, pending teacher review |
 
 Requirements reviewed from the University of Helsinki course on 20 October 2026:
 
