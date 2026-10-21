@@ -4,13 +4,11 @@ Starter structure and supplied tests from https://github.com/fullstack-hy2020/fs
 
 ## Progress
 
-- Chapter 1 warm-up: submitted and graded 1/1 on 20 October 2026.
-- Exercise 1: Unicafe feedback counters use a Zustand store, with separate action selectors and derived statistics. Production build and ESLint pass.
-- Exercise 2: original six browser tests are unchanged; their workflow is enabled on main. Local Chromium download failed because the downloaded archive was truncated. [GitHub Actions run 39448384730](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39448384730) passed all six supplied browser tests on 20 October 2026. Exercises 1 and 2 are prepared but have not been submitted to the course portal.
-- Exercises 3–17: Zustand Anecdotes implementation includes immutable voting and sorting, separate form/list, filtering, Fetch persistence, five-second notifications, zero-vote deletion and six unit tests. Build, lint, unit tests and the supplied mutation checks pass locally.
-- Exercises 19–26: Query Anecdotes implementation uses TanStack Query custom hooks, Fetch, Context notifications and server-error handling. Production build and lint pass locally.
-- Browser workflows for both anecdote apps and the unit-test verification workflow are enabled. All five workflows passed on source commit `7c0ae967cda1d5241576c9b87bc08f6a2840a2dc`: [Anecdotes browser tests](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827469), [unit and mutation checks](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827438), [Query behavior](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827417), [Query notifications](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827410), and [Unicafe](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827490). Local browser execution remains unverified as explained below.
-- Only the chapter 1 warm-up is submitted in this course. The remaining code is prepared for review, not course credit. Local browser-test execution remains blocked by a truncated Chromium download.
+- Warm-up and exercises 1–27 are submitted and individually graded 1/1. Chapters 1–3 are locked. Exercise 2 and exercises 7–27 were submitted in one batch on 22 October 2026 (Europe/Kiev), more than six hours after the preceding batch.
+- Exercise 28 is prepared with this repository URL, but is not submitted. Its personal acknowledgement checkbox remains for the student to read and complete. Chapter 4 remains unlocked; final repository grading by a teacher is pending.
+- All supplied browser tests passed locally on 22 October: Unicafe 6/6, Zustand Anecdotes 14/14, Query Anecdotes behavior 8/8 and notifications 5/5. All six unit tests and the supplied mutation verification also passed. Test assertions were unchanged.
+- The normal Playwright browser download was truncated in the execution environment. Local verification used Chromium 153 from the npm package `@sparticuz/chromium@153.0.0`, extracted without ownership changes, with temporary Playwright configuration outside the repository. The temporary configuration selected that executable, one worker and absolute server paths; the serverless single-process flag was removed to allow successive browser contexts. No test assertions or application source were changed for this verification.
+- All five GitHub workflows passed on source commit `7c0ae967cda1d5241576c9b87bc08f6a2840a2dc`: [Unicafe](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827490), [Anecdotes browser tests](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827469), [unit and mutation checks](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827438), [Query behavior](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827417) and [Query notifications](https://github.com/ShaonInTheCloud/full-stack-state-management/actions/runs/39455827410). Reverified on 22 October; later commits only update this README.
 
 Run each anecdote app in two terminals: `npm ci`, `npm run server`, and `npm run dev` from its directory. In `anecdotes`, `npm test` runs unit tests. The corresponding test directories contain the supplied Playwright suites; their tests are unchanged.
 
@@ -28,7 +26,7 @@ Implementation and validation were AI-assisted. Review the code and report assis
 | 13–18 | Supplied browser suite, `anecdotes/src/store.test.jsx`, mutation checks |
 | 19–23 | `query-anecdotes/src/hooks/useAnecdotes.js` and Fetch service |
 | 24–27 | `NotificationContext.jsx`, notification hooks and error callbacks |
-| 28 | This public repository URL, to be submitted after the prior chapters |
+| 28 | This public repository URL; prepared, pending student acknowledgement and submission |
 
 Requirements reviewed from the University of Helsinki course on 20 October 2026:
 
